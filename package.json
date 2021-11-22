@@ -37,7 +37,7 @@
   },
   "scripts": {
     "build": "rollup -c",
-    "build-storybook": "build-storybook",
+    "build-storybook": "build-storybook -o docs-build",
     "storybook": "start-storybook -p 6006"
   }
 }
