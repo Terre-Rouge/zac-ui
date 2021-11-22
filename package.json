@@ -2,6 +2,7 @@
   "name": "zac-ui",
   "version": "1.0.0",
   "description": "An accessible react components library developped with tailwindcss",
+  "sideEffects": false,
   "main": "lib/index.js",
   "module": "lib/index.esm.js",
   "types": "lib/index.d.ts",
