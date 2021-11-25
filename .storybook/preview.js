@@ -1,3 +1,5 @@
+import 'tailwindcss/tailwind.css'
+
 export const parameters = {
   layout: 'centered',
   actions: { argTypesRegex: '^on[A-Z].*' },
