@@ -1,11 +1,11 @@
 import React from 'react'
 import { Meta } from '@storybook/react/types-6-0'
 import { Story } from '@storybook/react'
-import Button, { ButtonProps } from './index'
+import Button, { Props } from './index'
 import { withDesign } from 'storybook-addon-designs'
 
 export default {
-  title: 'Components/Button',
+  title: 'Atoms/Button',
   component: Button,
   argTypes: {
     backgroundColor: { control: 'color' },
@@ -14,11 +14,11 @@ export default {
 } as Meta
 
 // Create a master template for mapping args to render the Button component
-const Template: Story<ButtonProps> = (args) => <Button {...args} />
+const Template: Story<Props> = (args) => <Button {...args} />
 
 // Reuse that template for creating different stories
 export const Primary = Template.bind({})
-Primary.args = { label: 'Primary 😃', size: 'large' }
+Primary.args = { children: 'Primary 😃', primary: true, size: 'medium', className: '' }
 Primary.parameters = {
   design: {
     type: 'figma',
@@ -27,7 +27,7 @@ Primary.parameters = {
 }
 
 export const Secondary = Template.bind({})
-Secondary.args = { ...Primary.args, primary: false, label: 'Secondary 😇' }
+Secondary.args = { ...Primary.args, primary: false, children: 'Secondary 😇' }
 Secondary.parameters = {
   design: {
     type: 'figma',
