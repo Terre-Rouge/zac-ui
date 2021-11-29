@@ -5,6 +5,7 @@
   "sideEffects": false,
   "main": "lib/index.js",
   "module": "lib/index.esm.js",
+  "preset": "lib/preset.js",
   "types": "lib/index.d.ts",
   "repository": "git@github.com:Terre-Rouge/zac-ui.git",
   "author": "Laurent Della-Negra <laurent.dellanegra@gmail.com>",

@@ -20,7 +20,7 @@ function Button({
       className={cn(
         {
           'rounded-full': true,
-          'bg-blue-400 text-white': primary,
+          'bg-regal-blue text-white': primary,
           'border-2 border-black': !primary,
           'px-2 py-1': size === 'small',
           'px-3 py-2': size === 'medium',
