@@ -21,3 +21,30 @@ An accessible react components library developped with tailwindcss.
 
 - [Reach UI](https://reach.tech/)
 - [Storefront UI](https://www.storefrontui.io/)
+
+## Installation
+
+### Install package
+
+```
+yarn add zac-ui
+```
+
+### Import component
+
+```
+import { Button } from 'zac-ui'
+...
+<Button primary size="large">
+    My Button
+</Button>
+```
+
+### Import style (preset tailwind configuration)
+
+```
+// tailwind.config.js
+module.exports = {
+  presets: [require('zac-ui/preset')],
+  ...
+```
