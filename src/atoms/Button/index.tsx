@@ -7,23 +7,40 @@ export interface Props extends React.ComponentPropsWithRef<typeof ButtonWithRef>
   size?: 'small' | 'medium' | 'large'
 }
 
-function Button({ primary = true, size = 'medium', type = 'button', className, ...others }: Props) {
+function Button({
+  primary = true,
+  size = 'medium',
+  type = 'button',
+  className,
+  children,
+  ...others
+}: Props) {
   return (
     <button
       type={type}
       className={cn(
         {
-          'rounded-full focus:ring-4 disabled:opacity-50': true,
-          'bg-regal-blue text-white': primary,
+          // global
+          'relative disabled:opacity-50 text-sm py-4 rounded-lg focus:outline-none uppercase': true,
+          // animation
+          'after:transition-all delay-300 after:absolute after:top-0 after:left-0 after:w-0 after:h-full after:bg-primary/100 active:after:bg-red-400 hover:after:w-full after:rounded-lg':
+            true,
+          'active:bg-opacity-90': true,
+          // primary
+          'bg-primary/90 text-white focus:ring-4 focus:ring-primary focus:ring-opacity-25': primary,
+          // other
           'border-2 border-black': !primary,
-          'px-2 py-1': size === 'small',
-          'px-3 py-2': size === 'medium',
-          'px-4 py-3': size === 'large',
+          // size
+          'px-5': size === 'small',
+          'w-60': size === 'medium',
+          'w-80': size === 'large',
         },
         className
       )}
       {...others}
-    />
+    >
+      <span className="relative z-10">{children}</span>
+    </button>
   )
 }
 export default Button

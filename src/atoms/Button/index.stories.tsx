@@ -18,7 +18,7 @@ const Template: Story<Props> = (args) => <Button {...args} />
 
 // Reuse that template for creating different stories
 export const Primary = Template.bind({})
-Primary.args = { children: 'Primary 😃', primary: true, size: 'medium' }
+Primary.args = { children: 'Primary', primary: true, size: 'medium' }
 Primary.parameters = {
   design: {
     type: 'figma',
